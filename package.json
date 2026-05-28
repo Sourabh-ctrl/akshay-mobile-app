@@ -3,16 +3,42 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "@expo/vector-icons": "^15.1.1",
+    "@gluestack-style/react": "^1.0.57",
+    "@gluestack-ui/config": "^1.1.20",
+    "@gluestack-ui/themed": "^1.1.73",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "babel-preset-expo": "^56.0.12",
     "expo": "~56.0.4",
+    "expo-auth-session": "~56.0.11",
+    "expo-av": "^16.0.8",
+    "expo-document-picker": "~56.0.4",
+    "expo-file-system": "~56.0.7",
+    "expo-haptics": "~56.0.3",
+    "expo-linear-gradient": "~56.0.4",
+    "expo-sharing": "~56.0.13",
+    "expo-speech-recognition": "^56.0.0",
     "expo-status-bar": "~56.0.4",
+    "expo-web-browser": "~56.0.5",
     "react": "19.2.3",
-    "react-native": "0.85.3"
+    "react-dom": "^19.2.3",
+    "react-native": "0.85.3",
+    "react-native-toast-message": "^2.3.3",
+    "react-native-web": "^0.21.2"
   },
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
-  "private": true
+  "private": true,
+  "overrides": {
+    "@react-aria/checkbox": {
+      "react": "^19.0.0"
+    },
+    "@react-native-aria/checkbox": {
+      "react": "^19.0.0"
+    }
+  }
 }

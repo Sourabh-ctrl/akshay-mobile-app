@@ -1,13 +1,19 @@
 {
   "expo": {
-    "name": "akshay-mobile-app",
-    "slug": "akshay-mobile-app",
+    "name": "Victory Journal",
+    "slug": "victory-journal",
+    "scheme": "akshay-mobile-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.victoryjournal.app",
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "Allow Victory Journal to recognize your speech.",
+        "NSMicrophoneUsageDescription": "Allow Victory Journal to use the microphone for speech recognition."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -15,10 +21,32 @@
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ],
+      "package": "com.victoryjournal.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sharing",
+      "expo-av",
+      "expo-web-browser",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Allow Victory Journal to use the microphone for speech recognition.",
+          "speechRecognitionPermission": "Allow Victory Journal to recognize your speech."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ee2686f5-5a4a-42ac-91d8-e02bfee29091"
+      }
     }
   }
 }
