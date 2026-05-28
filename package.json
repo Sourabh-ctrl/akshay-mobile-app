@@ -11,7 +11,7 @@
     "babel-preset-expo": "^56.0.12",
     "expo": "~56.0.5",
     "expo-auth-session": "~56.0.12",
-    "expo-av": "^16.0.8",
+    "expo-av": "~16.0.8",
     "expo-dev-client": "~56.0.16",
     "expo-document-picker": "~56.0.4",
     "expo-file-system": "~56.0.7",
