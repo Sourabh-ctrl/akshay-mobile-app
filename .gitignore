@@ -9,19 +9,42 @@ dist/
 web-build/
 expo-env.d.ts
 
-# Native
+# Native generated folders
+/ios
+/android
 .kotlin/
-*.orig.*
+
+# Metro
+.metro-health-check*
+
+# Environment variables — NEVER commit these
+.env
+.env.local
+.env*.local
+.env.development
+.env.production
+.env.staging
+
+# Credentials & signing
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
+*.orig.*
+credentials.json
+google-services.json
+GoogleService-Info.plist
 
-# Metro
-.metro-health-check*
+# EAS
+.eas/build
 
-# debug
+# Build artifacts
+*.apk
+*.aab
+*.ipa
+
+# Debug logs
 npm-debug.*
 yarn-debug.*
 yarn-error.*
@@ -30,12 +53,5 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files
-.env*.local
-
-# typescript
+# TypeScript
 *.tsbuildinfo
-
-# generated native folders
-/ios
-/android
